@@ -9,6 +9,7 @@ def proverka(i):
     else:
         return False
 #Давайте жить дружно
+#Hello
 t = [i for i in range(3, 10000000) if proverka(i)]
 print(sum(t))
 print(time.time()-start)
