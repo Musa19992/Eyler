@@ -9,4 +9,5 @@ while l[i] < 4000001:
     if (l[i] % 2 == 0):
         result = result + l[i]
 print("sum = %d" %result)
+#Изменения в файле
 print(time.time()-start) #Получаем конечное время
