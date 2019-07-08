@@ -1,34 +1,26 @@
 N = 28123
 lst2 = []
 lst3 = []
+lst4 = []
 def sumdel(i):
-    lst = []
-    for g in range(1, i):
-        if (i % g == 0):
-            lst.append(i)
-    return sum(lst)
+    sum = 1
+    for g in range (2, int(i**0.5) + 1):
+        if i % g == 0:
+            sum += g + (i//g)
+    return sum
 
 def proverka(i):
-    if (i < sumdel(i)):
+    z = sumdel(i)
+    if (i < z):
         lst2.append(i)
-def summa(N):
-    for i in range(1, N):
-        proverka(i)
-    for g in lst2:
-        for k in lst2:
-            summator = 0
-            summator = g + k
-            if summator not in lst3:
-                lst3.append(summator)
-summa(N)
 
-res = 0
 for i in range(1, N):
-    if i in lst3:
-        res += i
-print(res)
+    proverka(i)
 
-
+for k in range(len(lst2) - 1):
+    for t in range(k + 1, len(lst2)):
+        lst3.append(lst2[k] + lst2[t])
+print(sum([i for i in range(1, N) if i not in lst3]))
 """def compute():
     LIMIT = 29
     divisorsum = [0] * LIMIT
