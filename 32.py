@@ -1,39 +1,30 @@
-import math
-lst_z = []
+import time, math
+start=time.time()
+from math import sqrt
+lst = []
 def pan_chifr(i):
-    lst = []
+    lst2 = []
     for g in str(i):
-        if g not in lst and g != '0':
-            lst.append(g)
-    if (len(lst) == len(str(i))):
+        if g not in lst2 and g != '0':
+            lst2.append(g)
+    if (len(lst2) == len(str(i))):
         return True
     else:
         return False
 def deliteli(i):
-    lst = []
-    for g in range(37, int(i**0.5) + 1):
-        if (i % g == 0):
-            lst.append(g)
-            lst.append(i//g)
-            break
+    for g in range(1, int(sqrt(i)) + 1):
+        if (i % g == 0) and (pan_chifr(g) == True) and (pan_chifr(i//g) == True):
+            z = str(i) + str(g) + str(i//g)
+            p = ''.join(sorted(z))
+            if ("123456789" == p):
+                lst.append(i)
+                break
     return lst
-def uslovie(kent, z):
-    for i in str(kent):
-        if i in str(z):
-            return False
-            break
-    return True
-def delitel(i):
-    t = deliteli(i)
-    if (pan_chifr(i) == True):
-        if (len(t) > 1):
-            stroka = str(i) + str(t[0]) + str(t[1])
-            if "".join(sorted(stroka)) == "123456789":
-                lst_z.append(i)
-                print(i)
 for i in range(1, 10001):
-    delitel(i)
-print(sum(lst_z))
+    deliteli(i)
+print(sum(lst))
+print(time.time()-start)
+
 
 
 
