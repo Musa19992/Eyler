@@ -1,4 +1,6 @@
 import math
+import time
+start=time.time()
 N = 28124
 lst2 = []
 lst3 = []
@@ -18,11 +20,11 @@ def proverka(i):
 
 for i in range(1, N):
     proverka(i)
-print(lst2)
 for i in range(len(lst2)):
     for g in range(i, len(lst2)):
         lst3.append(lst2[i] + lst2[g])
 lst3 = sorted(set(lst3))
 print(sum([t for t in range(N) if t not in lst3]))
+print(time.time()-start)
 
 
