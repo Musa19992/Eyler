@@ -1,29 +1,24 @@
 import time
 start=time.time()
-from math import factorial
+lst_fact = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
 def suma_fac(i):
     z = 0
-    for i in str(i):
-        z +=factorial(int(i))
+    for g in str(i):
+        z += lst_fact[int(g)]
     return z
 def puti(i):
     lst = [i]
-    count = 1
     while 1==1:
         i = suma_fac(i)
         if i not in lst:
-            count += 1
             lst.append(i)
         else:
-            if count >= 60:
+            if len(lst) >= 60:
                 return True
-                break
+
             else:
                 return False
-                break
-otvet = 0
-for i in range(69, 1000000):
-    if puti(i) == True:
-        otvet += 1
-print(otvet)
+print(len([1 for i in range(69, 1000000) if puti(i) == True]))
 print(time.time()-start)
+
+
