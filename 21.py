@@ -1,4 +1,5 @@
 N = 10000
+lst3 = []
 def deliteli(i):
     lst = []
     for g in range(1, i):
