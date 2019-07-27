@@ -1,9 +1,9 @@
 ONES = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
         "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
 TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
-summa = ""
 STO = "hundred"
 TYSHA = "thousand"
+summa = ""
 for i in range(1, 10):
         if (i == 1):
             for g in range(1, 20):
