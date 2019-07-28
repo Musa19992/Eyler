@@ -1,4 +1,4 @@
-import time, math
+import time
 start=time.time()
 from math import sqrt
 lst = []
