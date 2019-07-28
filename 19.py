@@ -1,5 +1,3 @@
-MONTH = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
-k_dney = 0
 DAYS = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 y = 1
 count = 0
