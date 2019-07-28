@@ -10,7 +10,7 @@ for i in range(1901, 2001):
             k_dney = 31
         elif (g == 9) or (g == 11):
             k_dney = 30
-        elif (g%2 != 0):
+        elif (g % 2 != 0):
             k_dney = 31
         else:
             k_dney = 30
