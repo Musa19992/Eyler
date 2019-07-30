@@ -1,5 +1,4 @@
-import math
-import time
+import math, time
 start=time.time()
 N = 28124
 lst2 = []
