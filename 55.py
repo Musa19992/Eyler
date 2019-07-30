@@ -5,7 +5,6 @@ def Lich(i):
         i = (i + int(str(i)[::-1]))
         if palind(i) == True:
             return True
-            break
     return False
 
 def palind(i):
