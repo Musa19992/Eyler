@@ -1,14 +1,10 @@
 import itertools
-chislo = "0123456789"
-chislot = "0123456789"
-def swap(a, b):
-    t = a
-    a = b
-    b = t
-arr = list(range(1, 10))
-def krug(i):
-    lst = []
-    for i in range(2, 1000000):
-        temp = itertools.islice(itertools.permutations(arr), i, None)
-        lst.append(temp)
-
+kent = ""
+count = 0
+for i in itertools.permutations(list(range(10))):
+    if count == 999999:
+        for t in i:
+            kent += str(t)
+        break
+    count += 1
+print(kent)
