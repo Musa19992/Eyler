@@ -1,26 +1,17 @@
-from operator import index
+def toFixed(numObj, digits=0):
+    return f"{numObj:.{digits}f}"
+def funct(i):
+    k = 0
+    posol = ""
+    zet = str(toFixed(1/i, 100))
+    for t in zet[2::]:
+        posol += t
+        if posol == zet[2+len(posol):2 + 2*len(posol):] or zet[2 + k:5 + k:] == zet[2 + 3 + k:5 + 3 + k:]:
+            break
+        k += 1
+    return len(posol)
 max = 0
-lst1 = []
-lst2 = []
-for i in range(2, 1000):
-    k = []
-    t = float(1/i)
-    count = ""
-    for g in range(2, len(str(t)) - 1):
-        if (str(t)[g] != str(t)[g + 1]):
-            count += str(t)[g]
-        elif (str(t)[g] == str(t)[g + 1]):
-            if (len(count) > max):
-                max = len(count)
-                indexav = i
-                lst1.append(max)
-                lst2.append(indexav)
-            count = ""
-maxim = 0
-print(lst1)
-print(lst2)
-for i in range(len(lst1)):
-    if lst1[i] > maxim:
-        maxim = lst1[i]
-        kint = i
-print(lst2[kint])
+for i in range(1, 999):
+    if (funct(i) > max):
+        max = i
+print(max)
