@@ -4,8 +4,8 @@ def summa(i):
     return(sum([int(g) for g in str(i)]))
 maximum = 0
 for t in range(1, 100):
-    for k in range(1, 100):
-        r = summa(t**k)
+    for i in range(1, 100):
+        r = summa(t**i)
         if r > maximum:
             maximum = r
 print(maximum)
