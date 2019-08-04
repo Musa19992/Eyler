@@ -65,5 +65,5 @@ for i in listik:
                                         if pr(le, m) == True and le != m and pr(i, le):
                                             if prov(i, g, h, t, m, le, lostit):
                                                 otvet.append(eval(str(i) + "+" + str(g) + "+" + str(h) + "+" + str(t) + "+" + str(m) + "+" + str(le)))
-print(str(set(otvet)))
+print(str(set(otvet))[1:-1:])
 print(time.time() - start)
