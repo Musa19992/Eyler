@@ -52,18 +52,19 @@ def prov(a,b,c,d,e,f,lst):
     return False
 count = 0
 otvet = []
-for i in listik:
-    for g in listik:
-        if pr(g, i) == True and g != i:
-            for h in listik:
-                if pr(h, g) == True and h != g:
-                    for t in listik:
-                        if pr(t, h) == True and t != h:
-                            for m in listik:
-                                if pr(m, t) == True and m!= t:
-                                    for le in listik:
-                                        if pr(le, m) == True and le != m and pr(i, le):
-                                            if prov(i, g, h, t, m, le, lostit):
-                                                otvet.append(eval(str(i) + "+" + str(g) + "+" + str(h) + "+" + str(t) + "+" + str(m) + "+" + str(le)))
-print(str(set(otvet))[1:-1:])
+def otveti():
+    for i in listik:
+        for g in listik:
+            if pr(g, i) == True and g != i:
+                for h in listik:
+                    if pr(h, g) == True and h != g:
+                        for t in listik:
+                            if pr(t, h) == True and t != h:
+                                for m in listik:
+                                    if pr(m, t) == True and m!= t:
+                                        for le in listik:
+                                            if pr(le, m) == True and le != m and pr(i, le):
+                                                if prov(i, g, h, t, m, le, lostit):
+                                                    return i + g + h + t + m + le
+print(otveti())
 print(time.time() - start)
